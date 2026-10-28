@@ -1,7 +1,8 @@
 .site-footer {
-  padding-block: 48px 56px;
+  padding-block: clamp(56px, 7vw, 96px) 32px;
   background: var(--color-graphite);
   color: var(--color-on-dark);
+  overflow: hidden;
 }
 
 .site-footer__top {
@@ -27,14 +28,14 @@
 .site-footer__nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 32px;
+  gap: 8px 28px;
 }
 
 .site-footer__nav a {
   display: inline-block;
   padding-block: 6px;
-  color: rgba(246, 245, 242, 0.88);
-  font-size: var(--text-sm);
+  color: rgba(246, 245, 242, 0.86);
+  font-size: var(--fs-small);
   text-decoration: none;
   transition: color 0.2s var(--ease);
 }
@@ -43,10 +44,41 @@
   color: var(--color-white);
 }
 
-.site-footer__copy {
-  padding-top: 28px;
+/* Assinatura em escala de placar, ocupando a largura do conteúdo. */
+.site-footer__wordmark {
+  margin: clamp(28px, 4vw, 48px) 0 clamp(20px, 3vw, 32px);
+  font-family: var(--font-sans);
+  font-size: clamp(3rem, 14.2vw, 13.5rem);
+  font-weight: 900;
+  font-stretch: 66%;
+  line-height: 0.82;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-offwhite);
+}
+
+.site-footer__wordmark span {
+  color: var(--color-blue);
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-line-on-dark);
   color: var(--color-on-dark-muted);
-  font-size: 0.8125rem;
+}
+
+.site-footer__bottom a {
+  color: var(--color-on-dark);
+  text-decoration: none;
+}
+
+.site-footer__bottom a:hover {
+  color: var(--color-sand);
 }
 
 @media (max-width: 560px) {
@@ -56,7 +88,8 @@
   }
 
   .site-footer__nav {
-    flex-direction: column;
-    gap: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
   }
 }

@@ -1,0 +1,199 @@
+.game {
+  background: var(--color-offwhite);
+  padding-bottom: clamp(40px, 5vw, 72px);
+}
+
+.court {
+  max-width: 1440px;
+  margin: clamp(32px, 5vw, 72px) auto 0;
+  padding-inline: clamp(0px, 2vw, 32px);
+}
+
+.court__svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.court__sand {
+  fill: var(--color-sand);
+}
+
+.court__ground {
+  fill: var(--color-sand-deep);
+}
+
+.court__ground--grain {
+  fill: url(#sand-grain);
+}
+
+.court__grain {
+  fill: rgba(43, 43, 43, 0.16);
+}
+
+.court__line {
+  fill: none;
+  stroke: var(--color-white);
+  stroke-width: 3.5;
+  stroke-linejoin: round;
+}
+
+.court__post {
+  stroke: var(--color-graphite);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.court__net {
+  fill: url(#net-mesh);
+}
+
+.court__mesh {
+  fill: none;
+  stroke: rgba(43, 43, 43, 0.45);
+  stroke-width: 0.9;
+}
+
+.court__tape {
+  stroke: var(--color-offwhite);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.court__tape--low {
+  stroke-width: 2;
+  stroke: rgba(43, 43, 43, 0.55);
+}
+
+.court__label {
+  fill: var(--color-gray);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+}
+
+/* Jogadores: silhuetas articuladas (os segmentos giram nas juntas). */
+.player line,
+.player circle {
+  stroke-linecap: round;
+}
+
+.player .seg line,
+.player .seg-neck {
+  stroke: var(--color-graphite);
+}
+
+.player .seg--back line {
+  stroke: #4c4c4c;
+}
+
+.player .seg-thigh {
+  stroke-width: 13;
+}
+
+.player .seg-shin {
+  stroke-width: 11;
+}
+
+.player .seg-foot {
+  stroke-width: 8;
+}
+
+.player .seg-arm {
+  stroke-width: 8.5;
+}
+
+.player .seg-neck {
+  stroke-width: 9;
+}
+
+.player .head {
+  fill: var(--color-graphite);
+}
+
+.player .jersey {
+  stroke-width: 25;
+}
+
+.player .jersey-outline {
+  stroke-width: 29;
+}
+
+.player .shorts {
+  stroke-width: 22;
+}
+
+.player--left .jersey {
+  stroke: var(--color-blue);
+}
+
+.player--left .jersey-outline {
+  stroke: var(--color-blue-deep);
+}
+
+.player--left .shorts {
+  stroke: #1c1c1c;
+}
+
+.player--right .jersey {
+  stroke: var(--color-offwhite);
+}
+
+.player--right .jersey-outline {
+  stroke: var(--color-graphite);
+}
+
+.player--right .shorts {
+  stroke: var(--color-blue);
+}
+
+.player__shadow,
+.ball__shadow {
+  fill: rgba(43, 43, 43, 0.2);
+}
+
+.ball__body {
+  fill: var(--color-offwhite);
+  stroke: var(--color-graphite);
+  stroke-width: 1.5;
+}
+
+.ball__seam {
+  fill: none;
+  stroke: var(--color-blue);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.court__caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  max-width: calc(var(--container));
+  margin: 18px auto 0;
+  padding-inline: var(--gutter);
+  color: var(--color-text-muted);
+}
+
+.court__toggle {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-graphite);
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.court__toggle:hover {
+  border-color: var(--color-graphite);
+}
+
+/* Sem JS não há animação para pausar. */
+html:not(.js) .court__toggle {
+  display: none;
+}

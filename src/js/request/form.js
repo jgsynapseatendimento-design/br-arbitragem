@@ -1,3 +1,4 @@
+import { gsap } from 'gsap';
 import { WHATSAPP_NUMBER, IS_DEV } from './config.js';
 import { attachPhoneMask, isValidPhone } from './phone.js';
 import { GROUPS, buildMessage, displayValue, whatsappUrl } from './message.js';
@@ -46,6 +47,8 @@ export function initRequestForm(panel) {
   const whatsappLink = form.querySelector('[data-whatsapp-link]');
   const copyButton = form.querySelector('[data-copy]');
   const status = form.querySelector('[data-status]');
+  const progress = panel.querySelector('[data-step-progress]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   let current = 1;
   let returnToReview = false;
@@ -126,7 +129,18 @@ export function initRequestForm(panel) {
     const next = steps[step - 1].querySelector('[data-next]');
     if (next) next.textContent = returnToReview ? 'Salvar e revisar' : step === 3 ? 'Revisar' : 'Continuar';
 
+    if (progress) progress.style.transform = `scaleX(${step / TOTAL_STEPS})`;
+
     if (step === TOTAL_STEPS) renderReview();
+    if (focus && !reducedMotion.matches) {
+      // Entrada curta da nova etapa (só opacidade e posição, para o título continuar focável);
+      // os campos continuam no DOM, então os dados se mantêm.
+      gsap.fromTo(
+        steps[step - 1],
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out', clearProps: 'opacity,transform' },
+      );
+    }
     if (focus) {
       scrollPanelIntoView();
       steps[step - 1].querySelector('.step__title').focus({ preventScroll: true });

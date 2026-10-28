@@ -14,7 +14,7 @@ body {
   background: var(--color-offwhite);
   color: var(--color-text);
   font-family: var(--font-sans);
-  font-size: var(--text-base);
+  font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,9 +22,13 @@ body {
   overflow-x: hidden;
 }
 
-img {
+img,
+svg {
   display: block;
   max-width: 100%;
+}
+
+img {
   height: auto;
 }
 
@@ -65,9 +69,8 @@ textarea {
   outline-offset: 3px;
 }
 
-section[id],
 main [id] {
-  scroll-margin-top: 16px;
+  scroll-margin-top: calc(var(--header-h) - 8px);
 }
 
 .container {
@@ -75,6 +78,14 @@ main [id] {
   max-width: calc(var(--container) + 2 * var(--gutter));
   margin-inline: auto;
   padding-inline: var(--gutter);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .skip-link {
@@ -85,7 +96,7 @@ main [id] {
   padding: 10px 16px;
   background: var(--color-white);
   color: var(--color-graphite);
-  font-size: var(--text-sm);
+  font-size: var(--fs-small);
   font-weight: 600;
   transform: translateY(-160%);
   transition: transform 0.2s var(--ease);

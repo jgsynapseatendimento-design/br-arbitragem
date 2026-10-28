@@ -1,0 +1,9 @@
+Coloque aqui o vídeo original do Reel da BR Arbitragem com este nome exato:
+
+  reel-br-arbitragem.mp4   (H.264, vertical 9:16, idealmente até ~8 MB)
+
+Opcional: reel-br-arbitragem.webm (VP9) como fonte alternativa.
+
+O build detecta o arquivo automaticamente: com ele presente, a seção "Em quadra"
+reproduz o vídeo sem som, em loop, quando estiver visível. Sem ele, a seção mostra
+a imagem de capa e o link para o Reel no Instagram.

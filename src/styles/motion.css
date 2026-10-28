@@ -1,0 +1,17 @@
+/* Estados iniciais da abertura. Só valem com a classe "motion" (JS ativo e sem
+   preferência por movimento reduzido); sem ela todo o conteúdo fica visível. */
+.motion .hero__line > span {
+  transform: translateY(108%);
+}
+
+.motion [data-intro='brand'],
+.motion [data-intro='kicker'],
+.motion [data-intro='lead'],
+.motion [data-intro='cta'],
+.motion [data-intro='meta'] {
+  opacity: 0;
+}
+
+.motion .hero__meta-rule {
+  transform: scaleX(0);
+}

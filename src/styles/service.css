@@ -5,63 +5,70 @@
 
 .service__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-  gap: clamp(40px, 6.5vw, 88px);
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+  gap: clamp(40px, 6vw, 96px);
 }
 
 .service__text {
   padding-block: var(--section-pad);
 }
 
-.service__text .section-title {
-  max-width: 13em;
-}
-
 .service-list {
   margin-top: clamp(48px, 6vw, 88px);
+  border-top: 1px solid var(--color-line-on-dark);
 }
 
 .service-list__item {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1fr);
-  gap: 12px 32px;
-  padding-block: 28px;
-  border-bottom: 1px solid var(--color-line-on-dark);
+  grid-template-columns: 3.5em minmax(0, 1fr) minmax(0, 1fr);
+  align-items: baseline;
+  gap: 12px 28px;
+  padding-block: 30px;
 }
 
-.service-list__item:first-child {
-  padding-top: 0;
+.service-list__rule {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--color-line-on-dark);
+  transform-origin: left center;
+}
+
+.service-list__num {
+  color: var(--color-sand);
 }
 
 .service-list__title {
-  max-width: 9em;
-  font-family: var(--font-serif);
-  font-size: clamp(1.3125rem, 1.05rem + 0.75vw, 1.875rem);
-  font-weight: 600;
-  font-variation-settings: 'opsz' 24;
-  line-height: 1.3;
+  font-family: var(--font-sans);
+  font-size: clamp(1.375rem, 1rem + 1vw, 2rem);
+  font-weight: 700;
+  font-stretch: 78%;
+  line-height: 1.02;
+  text-transform: uppercase;
 }
 
 .service-list__text {
-  padding-top: 4px;
   color: var(--color-on-dark-muted);
   font-size: 1rem;
   line-height: 1.7;
 }
 
+.service__cta {
+  margin-top: 44px;
+}
+
 .service__media {
   position: relative;
   min-height: 100%;
-  overflow: hidden;
   background: #3a3a3a;
 }
 
 .service__media img {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   object-position: 50% 30%;
 }
 
@@ -86,13 +93,12 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   .service-list__item {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 8px;
+    grid-template-columns: 2.5em minmax(0, 1fr);
   }
 
   .service-list__text {
-    padding-top: 0;
+    grid-column: 2;
   }
 }
