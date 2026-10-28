@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BR Arbitragem Futevôlei — Arbitragem para campeonatos de futevôlei</title>
+    <meta
+      name="description"
+      content="Equipe de arbitragem para campeonatos e competições de futevôlei. Conte os detalhes do seu evento e consulte a disponibilidade da equipe."
+    />
+    <meta name="theme-color" content="#2B2B2B" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64.png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="BR Arbitragem Futevôlei" />
+    <meta property="og:title" content="BR Arbitragem Futevôlei" />
+    <meta
+      property="og:description"
+      content="Arbitragem de futevôlei para o seu próximo evento. Consulte a disponibilidade da equipe."
+    />
+    <meta property="og:image" content="/images/og-br-arbitragem.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="420" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500..700&family=Instrument+Sans:wght@400..600&display=swap"
+    />
+    <link rel="preload" as="image" href="/images/hero-equipe-1600.webp" fetchpriority="high" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- 1. Header -->
+    <header class="site-header" data-nav>
+      <div class="container site-header__inner">
+        <a class="site-header__logo" href="#inicio" aria-label="BR Arbitragem Futevôlei — início">
+          <img src="/images/logo-br-claro.webp" width="194" height="120" alt="BR Arbitragem" />
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          data-nav-toggle
+        >
+          <span class="nav-toggle__label">Menu</span>
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Principal" data-nav-panel>
+          <ul class="site-nav__list">
+            <li><a href="#quem-somos">Quem somos</a></li>
+            <li><a href="#servico">O serviço</a></li>
+            <li><a href="#duvidas">Dúvidas</a></li>
+            <li class="site-nav__cta">
+              <a class="btn btn--primary btn--sm" href="#disponibilidade">Consultar disponibilidade</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a class="btn btn--primary btn--sm site-header__cta" href="#disponibilidade">
+          Consultar disponibilidade
+        </a>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- 2. Hero -->
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero__media">
+          <img
+            class="hero__image"
+            src="/images/hero-equipe-1600.webp"
+            width="1600"
+            height="900"
+            fetchpriority="high"
+            alt="Cinco árbitros da BR Arbitragem uniformizados, de braços cruzados, lado a lado em uma quadra de areia."
+          />
+        </div>
+        <div class="container hero__content">
+          <h1 class="hero__title" id="hero-title">
+            Arbitragem de <em>futevôlei</em> <span class="hero__title-line">para o seu próximo evento.</span>
+          </h1>
+          <p class="hero__lead">
+            Uma equipe preparada para atuar em campeonatos e competições, com atenção à organização e à
+            condução das partidas.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#disponibilidade">Consultar disponibilidade</a>
+            <a class="btn btn--ghost" href="#quem-somos">Conhecer a equipe</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Quem somos -->
+      <section class="section section--light about" id="quem-somos" aria-labelledby="about-title">
+        <div class="container about__grid">
+          <div class="about__text">
+            <p class="eyebrow">Quem somos</p>
+            <h2 class="section-title" id="about-title">Arbitragem <br class="br-lg" />presente dentro de <br class="br-lg" />quadra.</h2>
+            <div class="prose">
+              <p>
+                A BR Arbitragem Futevôlei é uma equipe de arbitragem para campeonatos e competições de
+                futevôlei. Os árbitros atuam uniformizados e identificados, com foco na organização das
+                partidas e na comunicação com atletas e organizadores.
+              </p>
+              <p>
+                Cada evento tem seu formato, e o trabalho começa pelo alinhamento: o organizador informa os
+                detalhes da competição e a equipe avalia a necessidade e a disponibilidade.
+              </p>
+            </div>
+            <a class="text-link" href="#disponibilidade">Consultar disponibilidade</a>
+          </div>
+          <figure class="about__media">
+            <img
+              src="/images/equipe-quadra-960.webp"
+              width="960"
+              height="960"
+              loading="lazy"
+              decoding="async"
+              alt="Equipe de arbitragem reunida e abraçada em uma quadra de areia, com camisas pretas e amarelas."
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- 4. O serviço -->
+      <section class="service" id="servico" aria-labelledby="service-title">
+        <div class="container service__grid">
+          <div class="service__text">
+            <p class="eyebrow eyebrow--on-dark">O serviço</p>
+            <h2 class="section-title" id="service-title">Cada partida exige <br class="br-lg" />atenção e <br class="br-lg" />organização.</h2>
+            <ul class="service-list">
+              <li class="service-list__item">
+                <h3 class="service-list__title">Atuação conforme o evento</h3>
+                <p class="service-list__text">
+                  Organização da equipe de acordo com as necessidades da competição.
+                </p>
+              </li>
+              <li class="service-list__item">
+                <h3 class="service-list__title">Comunicação e postura</h3>
+                <p class="service-list__text">
+                  Conduta e diálogo adequados com atletas e organizadores durante as partidas.
+                </p>
+              </li>
+              <li class="service-list__item">
+                <h3 class="service-list__title">Alinhamento prévio</h3>
+                <p class="service-list__text">
+                  Formato, quadras, categorias e duração combinados antes do evento.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <figure class="service__media">
+            <img
+              src="/images/arbitro-br-coach-760.webp"
+              width="760"
+              height="951"
+              loading="lazy"
+              decoding="async"
+              alt="Árbitro da BR Arbitragem com apito e uniforme de referee, segurando uma moeda de sorteio na quadra."
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- 5. Dúvidas frequentes -->
+      <section class="section section--light faq" id="duvidas" aria-labelledby="faq-title">
+        <div class="container faq__grid">
+          <div class="faq__intro">
+            <p class="eyebrow">Dúvidas frequentes</p>
+            <h2 class="section-title" id="faq-title">Antes de <br class="br-lg" />consultar</h2>
+          </div>
+
+          <div class="faq__list" data-faq>
+            <div class="faq__item is-open">
+              <h3 class="faq__question">
+                <button type="button" id="faq-q1" aria-expanded="true" aria-controls="faq-a1">
+                  <span>Como consultar a disponibilidade da equipe?</span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq__answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                <div class="faq__answer-inner">
+                  <p>
+                    Preencha o formulário com os detalhes do evento. Ao final, você revisa a mensagem pronta
+                    e a envia para a equipe pelo WhatsApp. A equipe recebe os detalhes e continua a conversa
+                    por lá.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item is-open">
+              <h3 class="faq__question">
+                <button type="button" id="faq-q2" aria-expanded="true" aria-controls="faq-a2">
+                  <span>Quais informações são necessárias para organizar a arbitragem?</span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq__answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                <div class="faq__answer-inner">
+                  <p>
+                    Para começar: nome do responsável, WhatsApp, nome do evento e cidade/estado. Data, local,
+                    quantidade de quadras, duração, categorias e formato ajudam a equipe a avaliar com mais
+                    precisão e podem ser informados depois.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item is-open">
+              <h3 class="faq__question">
+                <button type="button" id="faq-q3" aria-expanded="true" aria-controls="faq-a3">
+                  <span>A equipe atende eventos em outras cidades?</span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq__answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                <div class="faq__answer-inner">
+                  <p>
+                    Informe a cidade e o estado do evento no formulário. O deslocamento e os demais detalhes
+                    são alinhados diretamente com a equipe.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item is-open">
+              <h3 class="faq__question">
+                <button type="button" id="faq-q4" aria-expanded="true" aria-controls="faq-a4">
+                  <span>Como funcionam deslocamento, alimentação e hospedagem?</span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq__answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                <div class="faq__answer-inner">
+                  <p>
+                    Dependem das características de cada evento e são alinhados diretamente com a equipe. No
+                    formulário você pode indicar se há necessidade de alimentação ou hospedagem.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item is-open">
+              <h3 class="faq__question">
+                <button type="button" id="faq-q5" aria-expanded="true" aria-controls="faq-a5">
+                  <span>Quando o agendamento é confirmado?</span>
+                  <span class="faq__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq__answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+                <div class="faq__answer-inner">
+                  <p>
+                    Somente após o aceite da equipe. Enviar a mensagem é uma consulta de disponibilidade e
+                    não reserva a data nem garante o atendimento.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Formulário de solicitação -->
+      <section class="section request" id="disponibilidade" aria-labelledby="request-title">
+        <div class="container request__grid">
+          <div class="request__intro">
+            <h2 class="section-title" id="request-title">Vamos organizar a <br class="br-lg" />arbitragem do seu <br class="br-lg" />evento?</h2>
+            <p class="request__lead">
+              Conte os detalhes da competição para que a equipe possa avaliar a disponibilidade e alinhar os
+              próximos passos com você.
+            </p>
+
+            <p class="eyebrow">Depois do envio</p>
+            <ul class="next-steps">
+              <li>A equipe analisa as necessidades do evento e verifica a disponibilidade.</li>
+              <li>As condições e os detalhes da contratação são alinhados diretamente com você.</li>
+              <li class="next-steps__strong">O agendamento só é confirmado após o aceite da equipe.</li>
+            </ul>
+
+            <p class="request__note">
+              Informe só o que já sabe. Seus dados ficam no seu navegador e só saem dele quando você envia a
+              mensagem pelo WhatsApp; nada é armazenado neste site.
+            </p>
+          </div>
+
+          <div class="request-panel" data-request>
+            <ol class="steps" aria-label="Etapas da solicitação">
+              <li class="steps__item" data-step-indicator="1">Contato</li>
+              <li class="steps__item" data-step-indicator="2">Evento</li>
+              <li class="steps__item" data-step-indicator="3">Estrutura</li>
+              <li class="steps__item" data-step-indicator="4">Revisão</li>
+            </ol>
+
+            <form class="request-form" id="request-form" novalidate data-request-form>
+              <!-- Etapa 1 -->
+              <div class="step" data-step="1">
+                <h3 class="step__title" tabindex="-1">Quem é o responsável?</h3>
+                <div class="field">
+                  <label class="field__label" for="f-nome">Nome do responsável</label>
+                  <input
+                    class="field__input"
+                    id="f-nome"
+                    name="nome"
+                    type="text"
+                    autocomplete="name"
+                    maxlength="80"
+                    required
+                    aria-describedby="f-nome-erro"
+                  />
+                  <p class="field__error" id="f-nome-erro" data-error-for="nome"></p>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="f-whatsapp">WhatsApp para contato</label>
+                  <input
+                    class="field__input"
+                    id="f-whatsapp"
+                    name="whatsapp"
+                    type="tel"
+                    inputmode="tel"
+                    autocomplete="tel-national"
+                    placeholder="(00) 00000-0000"
+                    maxlength="15"
+                    required
+                    aria-describedby="f-whatsapp-erro"
+                  />
+                  <p class="field__error" id="f-whatsapp-erro" data-error-for="whatsapp"></p>
+                </div>
+                <div class="step__actions">
+                  <button class="btn btn--primary" type="submit" data-next>Continuar</button>
+                </div>
+              </div>
+
+              <!-- Etapa 2 -->
+              <div class="step" data-step="2" hidden>
+                <h3 class="step__title" tabindex="-1">Qual é o evento?</h3>
+                <div class="field">
+                  <label class="field__label" for="f-evento">Nome do evento</label>
+                  <input
+                    class="field__input"
+                    id="f-evento"
+                    name="evento"
+                    type="text"
+                    maxlength="100"
+                    required
+                    aria-describedby="f-evento-erro"
+                  />
+                  <p class="field__error" id="f-evento-erro" data-error-for="evento"></p>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="f-cidade">Cidade/UF</label>
+                  <input
+                    class="field__input"
+                    id="f-cidade"
+                    name="cidade"
+                    type="text"
+                    autocomplete="address-level2"
+                    placeholder="Ex.: Cidade/UF"
+                    maxlength="80"
+                    required
+                    aria-describedby="f-cidade-erro"
+                  />
+                  <p class="field__error" id="f-cidade-erro" data-error-for="cidade"></p>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="f-local">
+                    Local ou arena <span class="field__optional">opcional</span>
+                  </label>
+                  <input class="field__input" id="f-local" name="local" type="text" maxlength="100" />
+                </div>
+                <div class="field-row">
+                  <div class="field">
+                    <label class="field__label" for="f-data">
+                      Data prevista <span class="field__optional">opcional</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="f-data"
+                      name="data"
+                      type="date"
+                      aria-describedby="f-data-erro"
+                    />
+                    <p class="field__error" id="f-data-erro" data-error-for="data"></p>
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="f-duracao">
+                      Duração <span class="field__optional">opcional</span>
+                    </label>
+                    <select class="field__input field__select" id="f-duracao" name="duracao">
+                      <option value="">Selecione</option>
+                      <option>1 dia</option>
+                      <option>2 dias</option>
+                      <option>3 dias</option>
+                      <option>Mais de 3 dias</option>
+                      <option>Ainda não definida</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="step__actions">
+                  <button class="btn btn--outline" type="button" data-back>Voltar</button>
+                  <button class="btn btn--primary" type="submit" data-next>Continuar</button>
+                </div>
+              </div>
+
+              <!-- Etapa 3 -->
+              <div class="step" data-step="3" hidden>
+                <h3 class="step__title" tabindex="-1">Como será a estrutura?</h3>
+                <div class="field-row">
+                  <div class="field">
+                    <label class="field__label" for="f-quadras">
+                      Quantidade de quadras <span class="field__optional">opcional</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="f-quadras"
+                      name="quadras"
+                      type="number"
+                      inputmode="numeric"
+                      min="1"
+                      max="99"
+                      step="1"
+                      aria-describedby="f-quadras-erro"
+                    />
+                    <p class="field__error" id="f-quadras-erro" data-error-for="quadras"></p>
+                  </div>
+                  <div class="field">
+                    <label class="field__label" for="f-categorias">
+                      Categorias e formato <span class="field__optional">opcional</span>
+                    </label>
+                    <input
+                      class="field__input"
+                      id="f-categorias"
+                      name="categorias"
+                      type="text"
+                      maxlength="120"
+                    />
+                  </div>
+                </div>
+
+                <fieldset class="field choice">
+                  <legend class="field__label">Alimentação da equipe <span class="field__optional">opcional</span></legend>
+                  <div class="choice__options">
+                    <label class="choice__option"><input type="radio" name="alimentacao" value="Necessária" /><span>Necessária</span></label>
+                    <label class="choice__option"><input type="radio" name="alimentacao" value="Não necessária" /><span>Não necessária</span></label>
+                    <label class="choice__option"><input type="radio" name="alimentacao" value="A combinar" /><span>A combinar</span></label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="field choice">
+                  <legend class="field__label">Hospedagem da equipe <span class="field__optional">opcional</span></legend>
+                  <div class="choice__options">
+                    <label class="choice__option"><input type="radio" name="hospedagem" value="Necessária" /><span>Necessária</span></label>
+                    <label class="choice__option"><input type="radio" name="hospedagem" value="Não necessária" /><span>Não necessária</span></label>
+                    <label class="choice__option"><input type="radio" name="hospedagem" value="A combinar" /><span>A combinar</span></label>
+                  </div>
+                </fieldset>
+
+                <div class="field">
+                  <label class="field__label" for="f-observacoes">
+                    Informações adicionais <span class="field__optional">opcional</span>
+                  </label>
+                  <textarea
+                    class="field__input field__textarea"
+                    id="f-observacoes"
+                    name="observacoes"
+                    rows="3"
+                    maxlength="600"
+                  ></textarea>
+                </div>
+                <div class="step__actions">
+                  <button class="btn btn--outline" type="button" data-back>Voltar</button>
+                  <button class="btn btn--primary" type="submit" data-next>Revisar</button>
+                </div>
+              </div>
+
+              <!-- Etapa 4 -->
+              <div class="step" data-step="4" hidden>
+                <h3 class="step__title" tabindex="-1">Revise e envie</h3>
+                <div class="review" data-review></div>
+
+                <div class="message-preview">
+                  <p class="message-preview__label" id="message-label">Mensagem que será enviada</p>
+                  <pre class="message-preview__text" aria-labelledby="message-label" tabindex="0" data-message></pre>
+                </div>
+
+                <div class="notice" data-whatsapp-missing hidden>
+                  <p>
+                    O contato de WhatsApp da equipe ainda não está configurado neste site, então o envio
+                    direto está indisponível. Você pode copiar a mensagem e enviá-la à equipe.
+                  </p>
+                  <p class="notice__dev" data-dev-hint hidden></p>
+                </div>
+
+                <div class="send-actions">
+                  <a
+                    class="btn btn--primary"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-whatsapp-link
+                    hidden
+                  >Abrir no WhatsApp</a>
+                  <button class="btn btn--primary" type="button" data-copy>Copiar mensagem</button>
+                </div>
+                <p class="send-status" role="status" aria-live="polite" data-status></p>
+
+                <button class="link-button" type="button" data-reset>Limpar formulário e começar de novo</button>
+
+                <div class="step__actions step__actions--review">
+                  <button class="btn btn--outline" type="button" data-back>Voltar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 7. Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__top">
+          <a class="site-footer__logo" href="#inicio" aria-label="BR Arbitragem Futevôlei — início">
+            <img src="/images/logo-br-claro.webp" width="194" height="120" alt="BR Arbitragem" loading="lazy" />
+          </a>
+          <nav aria-label="Rodapé">
+            <ul class="site-footer__nav">
+              <li><a href="#quem-somos">Quem somos</a></li>
+              <li><a href="#servico">O serviço</a></li>
+              <li><a href="#duvidas">Dúvidas</a></li>
+              <li><a href="#disponibilidade">Disponibilidade</a></li>
+            </ul>
+          </nav>
+        </div>
+        <p class="site-footer__copy">© 2026 BR Arbitragem Futevôlei</p>
+      </div>
+    </footer>
+  </body>
+</html>

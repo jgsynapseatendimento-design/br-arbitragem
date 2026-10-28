@@ -1,0 +1,128 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(600px, 62.5vw, 100svh);
+  background: var(--color-graphite);
+  color: var(--color-on-dark);
+  isolation: isolate;
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+}
+
+/* Escurecimento funcional para garantir a leitura do texto sobre a foto. */
+.hero__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(43, 43, 43, 0.38) 0%, rgba(43, 43, 43, 0.18) 30%, rgba(43, 43, 43, 0.55) 62%, rgba(43, 43, 43, 0.88) 100%),
+    linear-gradient(90deg, rgba(43, 43, 43, 0.42) 0%, rgba(43, 43, 43, 0) 65%);
+}
+
+.hero__content {
+  padding-top: calc(var(--header-h) + 48px);
+  padding-bottom: clamp(56px, 6vw, 88px);
+}
+
+.hero__title {
+  max-width: 15.5em;
+  font-family: var(--font-serif);
+  font-size: var(--title-hero);
+  font-weight: 600;
+  font-variation-settings: 'opsz' 36;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+}
+
+.hero__title em {
+  color: var(--color-sand);
+  font-style: italic;
+  font-weight: 500;
+  font-variation-settings: 'opsz' 72;
+}
+
+.hero__title-line {
+  display: block;
+}
+
+.hero__lead {
+  max-width: 35em;
+  margin-top: 26px;
+  color: rgba(246, 245, 242, 0.82);
+  font-size: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    display: block;
+    min-height: 0;
+  }
+
+  .hero__media {
+    position: relative;
+    inset: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  @media (min-width: 600px) {
+    .hero__media {
+      aspect-ratio: 16 / 10;
+    }
+  }
+
+  .hero__image {
+    object-position: 50% 50%;
+  }
+
+  .hero__media::after {
+    background: linear-gradient(180deg, rgba(43, 43, 43, 0) 65%, var(--color-graphite) 100%);
+  }
+
+  .hero__content {
+    padding-top: 4px;
+    padding-bottom: 56px;
+  }
+
+  .hero__title-line {
+    display: inline;
+  }
+
+  .hero__lead {
+    margin-top: 18px;
+  }
+
+  .hero__actions {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+}

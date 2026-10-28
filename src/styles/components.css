@@ -1,0 +1,161 @@
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 54px;
+  padding: 0 28px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s var(--ease),
+    border-color 0.2s var(--ease),
+    color 0.2s var(--ease);
+}
+
+.btn--sm {
+  min-height: 50px;
+  padding: 0 24px;
+  font-size: 0.9375rem;
+}
+
+.btn--primary {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background: var(--color-blue-hover);
+}
+
+.btn--ghost {
+  border-color: rgba(246, 245, 242, 0.55);
+  background: transparent;
+  color: var(--color-on-dark);
+}
+
+.btn--ghost:hover {
+  border-color: var(--color-on-dark);
+  background: rgba(246, 245, 242, 0.08);
+}
+
+.btn--ghost:focus-visible,
+.service :focus-visible,
+.site-header :focus-visible,
+.site-footer :focus-visible {
+  outline-color: var(--color-on-dark);
+}
+
+.btn--outline {
+  border-color: var(--color-line-strong);
+  background: var(--color-white);
+  color: var(--color-graphite);
+}
+
+.btn--outline:hover {
+  border-color: var(--color-graphite);
+}
+
+/* Etiqueta de seção */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+  color: var(--color-blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: '';
+  flex: none;
+  width: 32px;
+  height: 1px;
+  background: currentColor;
+}
+
+.eyebrow--on-dark {
+  color: var(--color-on-dark-muted);
+}
+
+/* Títulos */
+/* Quebras de linha intencionais da referência, aplicadas só em telas largas. */
+.br-lg {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .br-lg {
+    display: inline;
+  }
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: var(--title-section);
+  font-weight: 600;
+  font-variation-settings: 'opsz' 30;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* Texto corrido */
+.prose {
+  display: grid;
+  gap: 18px;
+  color: var(--color-text-muted);
+  font-size: var(--text-body);
+  line-height: 1.75;
+}
+
+/* Link de texto */
+.text-link {
+  display: inline-block;
+  padding-bottom: 3px;
+  border-bottom: 1px solid currentColor;
+  color: var(--color-blue);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+
+.text-link:hover {
+  color: var(--color-blue-hover);
+}
+
+.link-button {
+  padding: 0 0 2px;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: none;
+  color: var(--color-graphite);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.link-button:hover {
+  color: var(--color-blue);
+}
+
+/* Seções */
+.section {
+  padding-block: var(--section-pad);
+}
+
+.section--light {
+  background: var(--color-offwhite);
+}
